@@ -7,7 +7,7 @@ export class LessonType {
   @Field()
   name: string;
   @Field()
-  startingDate: string;
+  startDate: string;
   @Field()
-  endingDate: string;
+  endDate: string;
 }
