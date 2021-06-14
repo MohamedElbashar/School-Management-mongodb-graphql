@@ -8,6 +8,11 @@ export class LessonService {
   constructor(
     @InjectRepository(Lesson) private lessonRepository: Repository<Lesson>,
   ) {}
+
+  async getLesson(id: string): Promise<Lesson> {
+    return this.lessonRepository.findOne({ id });
+  }
+
   async createLesson(
     name: string,
     startDate: string,
